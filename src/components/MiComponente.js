@@ -26,10 +26,23 @@ class MiComponente extends Component{
                     
                     })
                 }
-            </ol>
-      
-            <hr/>  
-            <h2>Probando el componente</h2>      
+            </ol>      
+            <hr/>
+                
+                {this.props.indicador==1 ? (
+                   <Fragment>
+                        <h1>Desde una prop: Saludo 1</h1>
+                        <h3>{this.props.saludo}</h3>
+                    </Fragment>
+                   ) : (
+                    <Fragment>
+                    <h1>Desde una prop: Saludo 2</h1>
+                    <h3>{this.props.saludo}</h3>
+                    </Fragment>
+                   )
+                }
+
+
         </div>
         // <Fragment>
         //     <h1>Hola Soy el componente llamado: MiComponente</h1> 
