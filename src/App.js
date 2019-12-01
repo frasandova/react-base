@@ -1,24 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./assets/css/App.css";
+
+//Importar componentes
+
+import Header from "./components/Header";
+import Slider from "./components/Slider";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import SeccionPrincipal from "./components/SeccionPrincipal";
+import Peliculas from "./components/Peliculas";
 
 function App() {
+
+  var buttonString="Ir al blog";
+
+  // var nombre = "Francisco sandoval";
+  // var presentacion = (
+  //   <h2>
+  //     {" "}Hola, Soy {nombre}{" "}
+  //   </h2>
+  // );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <Slider 
+        title="Slider bienvenido Francisco Sandoval"
+        btn={buttonString}
+      />
+
+      <div className="center">
+  
+        {/* <SeccionPrincipal/> */}
+
+        <Peliculas/>
+        
+        <Sidebar />
+
+        <div className="clearfix" />
+      </div>
+
+      <Footer />
     </div>
   );
 }
